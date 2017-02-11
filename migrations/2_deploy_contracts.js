@@ -1,5 +1,5 @@
-var Asset = artifacts.require("./Asset.sol");
+var Owner = artifacts.require("./Owner.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Asset, 1, "Screwdriver", 10, 1);
+  deployer.deploy(Owner);
 };
