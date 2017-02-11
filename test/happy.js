@@ -10,9 +10,10 @@ contract('Owner', function(accounts) {
 
             //console.log("owner instance: \n", ownerInstance);
             // add an asset, arguments: id, description, pricePerTimeUnit, TimeUnit(days in this case.), 
-            return instance.addAsset(1,"awesome set of speakers.",50,2,{from:accounts[0]});
+            return instance.addAsset(1,"awesome set of speakers.",50,1,{from:accounts[0]});
         }).then(function() {
-            return ownerInstance._assets.call();
+            console.log("Asset added.");
+            return ownerInstance._assets.call(0);
         }).then(function(assets){
             console.log("assets: \n", assets);
         });
